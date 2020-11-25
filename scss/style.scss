@@ -1,0 +1,129 @@
+// Variables
+$primary : #3F51B5;
+$secondary : #FF5252;
+$text-color : #FFFFFF;
+$secondary-color : #212121;
+$primary-fonts : 'Montserrat',
+sans-serif;
+;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    color: $text-color;
+    font-family: $primary-fonts;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+#sidebar {
+    padding: 20px 0;
+    background-color: $primary;
+    width: 220px;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    transition: 250ms ease-in;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+    .navbar-header {
+        display: flex;
+        padding: 10px 20px;
+
+        .brand-logo {
+            font-size: 1.5em;
+            transform: translateX(0);
+            transition: 250ms ease-in;
+            visibility: visible;
+        }
+
+
+    }
+}
+
+.navbar-body {
+    .nav-item {
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: 400ms all ease-in-out;
+        transform: translateX(0);
+
+        &:hover {
+            background-color: lighten($primary, 15%)
+        }
+    }
+}
+
+#main-content {
+    flex: 1 0 auto;
+    padding: 30px 20px;
+
+    .check-box {
+        cursor: pointer;
+        display: inline-block;
+
+        .line {
+            width: 20px;
+            height: 2px;
+            background-color: $secondary-color;
+            margin: 4px 0;
+            display: block;
+        }
+    }
+
+}
+
+#checkbox {
+    display: none;
+}
+
+#checkbox:checked~#sidebar {
+    width: 0;
+    animation: sidebarAnim 500ms;
+}
+
+#checkbox:checked~#sidebar .nav-item {
+    transform: translateX(-200px);
+}
+
+#checkbox:checked~#sidebar .brand-logo {
+    transform: translateX(-200px);
+    visibility: hidden;
+}
+
+#checkbox:checked~#sidebar .navbar-header {
+    visibility: hidden;
+}
+
+@keyframes sidebarAnim {
+    0% {
+        width: 220px;
+        opacity: 1;
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    50% {
+        width: 220px;
+    }
+
+    100% {
+        width: 0;
+        opacity: 0;
+        transform: translateX(-220px);
+        visibility: hidden;
+    }
+}
+

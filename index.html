@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Getting Started</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+   
+    <script src="https://kit.fontawesome.com/70ea06a304.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    
+    <input type="checkbox" name="checkbox" id="checkbox">
+    <aside id="sidebar">
+        <header class="navbar-header">
+            <a href="#" class="brand-logo"> Sections</a>
+        </header>
+        <main id = "navbar-body" class="navbar-body">
+            <!-- <ul>
+                <li class="nav-item">
+                    <a id = "default" class="nav-link"> Default </a>
+                </li>
+            </ul> -->
+       
+        </main>
+        <div id="button-container">
+          <button class="nav-item " id="btn-section">+</button>
+
+        </div>
+        <!-- <button class="nav-item" id="btn-section">+</button> -->
+    </aside>
+    <main id="main-content">
+        <label for="checkbox" class="check-box">
+            <span class="line line1"></span>
+            <span class="line line3"></span>
+            <span class="line line2"></span>
+        </label>
+    </main>
+
+<!-- todo content -->
+
+    
+<div id = "content">
+  <div id="title">
+    <div id="title-btn"><h1>To-Do-You</h1><button id="add-todo-btn" >+</button></div>
+    <h2>Section</h2>
+  </div>
+  <div id="todo-container">
+
+    <!-- <li class="todo-item">
+      <div class = "to-do-left">
+              <button id="todo-status">Tick</button>
+              
+              <div id="todo-title-discription">
+                <p id="todo-title">Washing</p>
+                <p id = "todo-discription">Make sure you do the washing you or else</p>
+              </div>
+
+            </div>
+      <div class="to-do-right" >
+        
+                <div id="todo-content">
+                  <p id=todo-date>Due: 03/10/84</p>
+                  <p id="todo-priority">High</p>
+                </div>
+                <div id="todo-btns">
+                  <button id="todo-edit">edit</button>
+                  <button id="todo-delete">delete</button>
+                </div>
+           
+      </div>
+
+  
+    
+      
+    </li> -->
+
+  </div>
+ 
+
+  <!-- new todo form -->
+  
+  <div id="form-container" class="form-container">
+    <form onsubmit="return false">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Title</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="todoT" name="title" placeholder="To-Do..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Date</label>
+        </div>
+        <div class="col-75">
+          <input type="date" id="date" name="lastname" placeholder="date..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="country">Priority</label>
+        </div>
+        <div class="col-75">
+          <select id="priority" name="priority">
+            <option value="high">High</option>
+            <option value="mid">Mid</option>
+            <option value="low">Low</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="discription"></label>
+        </div>
+        <div class="col-75">
+          <textarea id="discription" name="discription" placeholder="Write something.." style="height:200px"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input id="btn-todo" type="submit" value="submit">
+      </div>
+    </form>
+  </div>
+  
+  <!-- new section form -->
+  
+  <div id ="form-container-sections" class="form-container-sections">
+    <form  onsubmit="return false" >
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Section Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="section-name" name="title" placeholder="Section..">
+        </div>
+      </div>
+      
+      <div class="row">
+        <input id="btn-submit-section" type="submit" value="submit">
+      </div>
+    </form>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+  </body>
+</html>
